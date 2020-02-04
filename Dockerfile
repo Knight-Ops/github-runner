@@ -39,8 +39,8 @@ USER runner
 
 # Install Rust
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
-RUN rustup toolchain install nightly
 ENV PATH=/home/runner/.cargo/bin:$PATH
+RUN rustup toolchain install nightly
 
 COPY ./entrypoint.sh entrypoint.sh
 
